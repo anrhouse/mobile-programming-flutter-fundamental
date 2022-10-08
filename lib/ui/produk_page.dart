@@ -1,3 +1,4 @@
+import 'package:belajarflutter/ui/produk_form.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -15,6 +16,23 @@ class _ProdukPageState extends State<ProdukPage> {
     return Scaffold(
         appBar: AppBar(
           title: const Text("Data Produk"),
+          actions: [
+            GestureDetector(
+              //Menampilkan Icon +
+              child: const Icon(
+                Icons.add,
+              ),
+
+              //Pada saat icon + di tap
+              onTap: () async {
+                //Pindah ke halaman produk form
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const ProdukForm()));
+              },
+            )
+          ],
         ),
         body: ListView(
           children: const [
