@@ -18,7 +18,7 @@ class _ProdukPageState extends State<ProdukPage> {
           title: const Text("Data Produk"),
           actions: [
             GestureDetector(
-              //Menampilkan Icon + cek
+              //Menampilkan Icon
               child: const Icon(
                 Icons.add,
               ),
