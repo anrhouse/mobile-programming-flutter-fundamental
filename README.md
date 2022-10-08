@@ -1,6 +1,6 @@
-# belajarflutter
+# Fundamental Flutter
 
-Belajar Flutter Yang Pertama
+File praktikum fundamental flutter
 
 ## Getting Started
 
