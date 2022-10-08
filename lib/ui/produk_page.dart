@@ -59,7 +59,7 @@ class _ProdukPageState extends State<ProdukPage> {
             ItemProduk(
               kodeProduk: "A001",
               namaProduk: "Kulkas",
-              hargaProduk: "3000000",
+              hargaProduk: 3000000,
             )
           ],
         ));
