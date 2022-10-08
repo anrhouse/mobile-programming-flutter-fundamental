@@ -53,6 +53,13 @@ class _ProdukPageState extends State<ProdukPage> {
                 title: Text("Mesin Cuci"),
                 subtitle: Text("1500000"),
               ),
+            ),
+
+            //list
+            ItemProduk(
+              kodeProduk: "A001",
+              namaProduk: "Kulkas",
+              hargaProduk: "3000000",
             )
           ],
         ));
