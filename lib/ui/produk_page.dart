@@ -58,3 +58,23 @@ class _ProdukPageState extends State<ProdukPage> {
         ));
   }
 }
+
+class ItemProduk extends StatelessWidget {
+  final String? kodeProduk;
+  final String? namaProduk;
+  final int? hargaProduk;
+
+  const ItemProduk(
+      {Key? key, this.kodeProduk, this.namaProduk, this.hargaProduk})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      child: ListTile(
+        title: Text(namaProduk.toString()),
+        subtitle: Text(hargaProduk.toString()),
+      ),
+    );
+  }
+}
