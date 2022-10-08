@@ -1,3 +1,4 @@
+import 'package:belajarflutter/ui/produk_detail.dart';
 import 'package:belajarflutter/ui/produk_form.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
@@ -55,6 +56,7 @@ class _ProdukPageState extends State<ProdukPage> {
               ),
             ),
 
+            //Note : pada bagian list dapat diklik, sedangkan card diatas tidak bisa
             //list
             ItemProduk(
               kodeProduk: "A001",
@@ -87,11 +89,23 @@ class ItemProduk extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      child: ListTile(
-        title: Text(namaProduk.toString()),
-        subtitle: Text(hargaProduk.toString()),
+    return GestureDetector(
+      child: Card(
+        child: ListTile(
+          title: Text(namaProduk.toString()),
+          subtitle: Text(hargaProduk.toString()),
+        ),
       ),
+      onTap: () {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => ProdukDetail(
+                      kodeProduk: kodeProduk,
+                      namaProduk: namaProduk,
+                      harga: hargaProduk,
+                    )));
+      },
     );
   }
 }
